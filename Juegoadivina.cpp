@@ -1,13 +1,14 @@
+//Luis Bocancho 
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include "../../../librerias/arrays.h"
 using namespace std;
+using namespace llenarvectorn;
 
 void juegoAdivina(int rango) {
-    srand(time(0));
-    int numero_secreto = rand() % rango + 1;
+    inicializarAleatorio();
+    int numero_secreto = generarNumeroAleatorio(rango);
     int intento, intentos = 0;
-    const int max_intentos = 5;
+    const int max_intentos = 3;
 
     cout << "Bienvenido al juego de adivinanza de numeros" << endl;
     cout << "Estoy pensando en un numero entre 1 y " << rango << " " << endl;
@@ -23,12 +24,13 @@ void juegoAdivina(int rango) {
             cout << "Demasiado alto. Intenta de nuevo " << endl;
         } else {
             cout << "Felicidades Adivinaste el numero en el " << intentos << " intento  " << endl;
+            return;
         }
     }
     cout << "Lo siento, has alcanzado el numero maximo de los intentos permitidos\n El numero era el siguiente " << numero_secreto << " " << endl;
 }
 
-main() {
+int main() {
     int rango;
     cout << "Ingrese el rango maximo para el juego de adivinanza: ";
     cin >> rango;

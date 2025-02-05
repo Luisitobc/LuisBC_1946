@@ -1,9 +1,9 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
-#include "../../librerias/arrays.h"
+#include "../../../librerias/arrays.h"
 using namespace std;
-using namespace vectorn;
+using namespace llenarvectorn;
 bool isBusquedaBinaria(int v[], int n, int elemento) {
     int arriba,abajo,centro;
     abajo=0;
@@ -28,12 +28,12 @@ main()
     cout << "Nro de Elementos del Array: ";
     cin >> ne;
     int vector[ne];
-    llenarVector(vector, ne);
+    llenar(vector, ne);
     cout << "Vector original: ";
-    verVector(vector,ne);
-    ordenarBurbujav3(vector, ne);
+    mostrar(vector,ne);
+    ordenarBurbujaV3(vector, ne);
     cout<< "Vector ordenado: ";
-    verVector(vector, ne);
+    mostrar(vector, ne);
     cout << "Ingrese el dato a buscar: ";
     cin >> dato;
 
