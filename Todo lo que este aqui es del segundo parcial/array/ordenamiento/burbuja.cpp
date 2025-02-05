@@ -108,7 +108,7 @@ void escogerMejorBurbuja(int v[], int n) {
     }
 }
 
-main() {
+/*main() {
     int ne;
     cout<<"Numeros de elementos: ";
     cin>>ne;
@@ -124,4 +124,4 @@ main() {
     muestraVector(vec,ne);
     cout<<endl;
     
-}
+}*/

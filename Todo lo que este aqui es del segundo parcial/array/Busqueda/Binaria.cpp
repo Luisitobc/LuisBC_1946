@@ -1,41 +1,41 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include "../ordenamiento/Insercion.cpp"
+#include <stdlib.h>
+#include <time.h>
+#include "../../librerias/arrays.h"
 using namespace std;
-
-void llenaDatos(int v[], int n) {
-
-}
-
-void verElementos(int v[], int n) {
-
-}
-
-bool isBusquedabinaria(int v[], int n, int elemento) {
-    int inicio = 0, fin = n - 1, mitad;
-    while (inicio <= fin) {
-        mitad = (inicio + fin) / 2;
-        if (v[mitad] == elemento) {
+using namespace vectorn;
+bool isBusquedaBinaria(int v[], int n, int elemento) {
+    int arriba,abajo,centro;
+    abajo=0;
+    arriba=n-1;
+    while(abajo<=arriba) {
+        centro=(abajo+arriba)/2;
+        if(v[centro]==elemento) {
             return true;
-        } else if (v[mitad] < elemento) {
-            inicio = mitad + 1;
-        } else {
-            fin = mitad - 1;
+        }
+        else if(v[centro]>elemento) {
+            arriba=centro+1;
+        }
+        else {
+            abajo=centro-1;
         }
     }
-    return false;
 }
 
-int main() {
+main()
+{
     int ne, dato;
-    cout << "Ingrese el numero de elementos del vector: ";
+    cout << "Nro de Elementos del Array: ";
     cin >> ne;
     int vector[ne];
-    llenaDatos(vector, ne);
-    cout << "Elementos del array: ";
-    verElementos(vector, ne);
+    llenarVector(vector, ne);
+    cout << "Vector original: ";
+    verVector(vector,ne);
+    ordenarBurbujav3(vector, ne);
+    cout<< "Vector ordenado: ";
+    verVector(vector, ne);
     cout << "Ingrese el dato a buscar: ";
     cin >> dato;
-    (isBusquedabinaria(vector, ne, dato)) ? cout << "El elemento esta en el array" : cout << "El elemento no existe en el array";
+
+    (isBusquedaBinaria(vector, ne, dato)) ? cout << "\nDato Encontrado ": cout << "\nDato no encontrado";
 }
