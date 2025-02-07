@@ -1,6 +1,6 @@
 //Luis Bocancho 
 #include <iostream>
-#include "../../../librerias/arrays.h"
+#include "../librerias/arrays.h"
 using namespace std;
 using namespace llenarvectorn;
 
