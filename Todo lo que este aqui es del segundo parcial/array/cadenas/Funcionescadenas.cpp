@@ -73,6 +73,17 @@ bool esminuscula(char cad1[]){
     }
     return minuscula;
 }
+void mayusculas(char cad1[]){
+    for (int i = 0; i < strlen(cad1); i++){
+        cad1[i] = toupper(cad1[i]);
+    }
+}
+
+void minusculas(char cad1[]){
+    for (int i = 0; i < strlen(cad1); i++){
+        cad1[i] = tolower(cad1[i]);
+    }
+}
 
 main (){
         char cad1[70], cad2[70];
@@ -94,6 +105,9 @@ main (){
         (esespacio(cad1)) ? cout << "\n La cadena " <<cad1 << " tiene espacios" : cout << "\n La cadena " <<cad1 << " no tiene espacios";
         (esmayuscula(cad1)) ? cout << "\n La cadena " <<cad1 << " es mayuscula" : cout << "\n La cadena " <<cad1 << " no es mayuscula";
         (esminuscula(cad1)) ? cout << "\n La cadena " <<cad1 << " es minuscula" : cout << "\n La cadena " <<cad1 << " no es minuscula";
-    
+        mayusculas(cad1);
+        cout << "\n La cadena en mayusculas es: " << cad1;
+        minusculas(cad1);
+        cout << "\n La cadena en minusculas es: " << cad1;
     
     }
