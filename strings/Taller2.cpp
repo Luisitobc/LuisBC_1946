@@ -25,5 +25,21 @@ main (){
     cout<< " volumen maximo "<<cadena1.capacity()<<endl;
     //tamaño el bytes del objeto string que ocupa actualmente
     cout<<"capacidad"<<cadena2.capacity()<<endl;
+    //usando el metodo compara 
+    cout<<"cadena1 = "<<cadena1<<"cadena2 = "<<cadena2<<endl;
+    cadena1=" Mola ";
+    cadena2="Holaas para mi dayanara ";
+    int comparacion= cadena1.compare(cadena2);
+    cout<<"comparacion "<<comparacion<<endl;
+    int encontrado=cadena1.find("para");
+    cout<<"encontrada "<<encontrado<<endl;
+    (cadena1.find("cos")!=string::npos)? cout<<"encontrado\n": cout<<"no encontrado\n";
+    string numerostr="123";
+    int numero=stoi(numerostr);
+    cout<<endl;
+    cout<<numero<<endl;
+    cin>>numero;
+
+
 
 }
