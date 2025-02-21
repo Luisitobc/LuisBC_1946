@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+struct persona{
+
+    int id;
+    string nombre;
+    int edad;
+    bool casado=false;
+};
+
+void ingresarRegistro(persona per[],int n ){
+    int i;
+    char resp;
+    for(i=0;i<n;i++){
+        cin>>per[i].id;
+        cout<<"Ingrese el nombre: ";
+        cin>>per[i].nombre;
+        cout<<"Ingrese la edad: ";
+        cin>>per[i].edad;
+        cout<<" Es casado?: <<S/N:"; 
+        cin.get(resp);
+        cin.ignore(); 
+        if (resp=='S'||resp=='s')
+            per[i].casado=true;
+     
+   }
+}
+
+void motrarDatosRegistro(persona per[],int n){
+    int i;
+    cout<<"ID\tNOMBRE\tEDAD\tCASADO"<<endl;
+    for(i=0;i<n;i++){
+        cout<<per[i].id<<"\t";
+        cout<<per[i].nombre<<"\t";
+        cout<<per[i].edad<<"\t";
+        cout<<per[i].casado<<endl;                    
+    }
+}
+
+
+main(){
+
+    int np;
+    cout<<"Ingrese el numero de personas: ";
+    cin>>np;
+    persona personas[np];
+    ingresarRegistro(personas,np);
+    motrarDatosRegistro(personas,np);
+
+
+
+}

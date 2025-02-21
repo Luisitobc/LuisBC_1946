@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string>
-#include "../tutorias/ahorcado.h"
+#include "ahorcado.h"
 using namespace std;
 
 
